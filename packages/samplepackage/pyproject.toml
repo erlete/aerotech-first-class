@@ -1,0 +1,65 @@
+[build-system]
+requires = [
+    "setuptools"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "samplepackage"
+version = "1.0.0"
+description = "Sample package for eduactional purposes"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10.0"
+authors = [
+    {name = "Sample Author", email = "samplemaintainer@email.com"}
+]
+maintainers = [
+    {name = "Sample Maintainer", email = "samplemaintainer@email.com"}
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent"
+]
+
+dependencies = [
+    "colorama==0.4.6",
+    "types-colorama==0.4.15.12"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest==7.4.3",
+    "pytest-cov==4.1.0",
+    "pytest-html==4.1.1",
+    "pycodestyle==2.11.1",
+    "pydocstyle==6.3.0",
+    "mypy==1.7.0",
+    "flake8==6.1.0"
+]
+
+[project.urls]
+"Homepage" = "https://url/to/repo"
+"Bug Tracker" = "https://url/to/repo/issues"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "src/samplepackage/tests"
+]
+console_output_style = "progress"
+log_level = 0
+log_cli = true
+addopts = [
+    "--color=yes",
+    "--capture=no",
+    "--cov-config=.coveragerc",
+    "--cov-report=html",
+    "--cov=src/samplepackage"
+]
+minversion = "7.4.2"
+required_plugins = [
+    "pytest-cov",
+    "pytest-html"
+]

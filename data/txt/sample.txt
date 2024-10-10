@@ -1,0 +1,3 @@
+Felicidades, has abierto un archivo en Python. No es la más increíble de las cosas que se pueden llegar a hacer con este lenguaje,    ¡pero felicidades igualmente!
+
+Por cierto, si estás visualizando incorrectamente este texto, probablemente te hayas olvidado de indicar la codificación en la instrucción de apertura de archivo.
